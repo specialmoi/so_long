@@ -14,23 +14,13 @@
 
 static void game_init(t_game *game)
 {
-	// ft_bzero(game, sizeof(t_game));
 	game->map = (t_map *)malloc(sizeof(t_map));
 	if (!game->map)
 		exit(EXIT_FAILURE);
 	ft_bzero(game->map, sizeof(t_map));
-/* 	game->map->player = 0;
-	game->map->collectibles = 0;
-	game->map->exit = 0;
-	game->map->height = 0;
-	game->map->width = 0;
-	game->map->lines = NULL;
-	game->map->lines_copy = NULL; */
 	game->mlx = NULL;
 	game->collected = 0;
 	game->movement = 0;
-
-	//game->player_id = 0;
 }
 
 /* save texture of image and then assign to mlx_image_t */
